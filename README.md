@@ -3,10 +3,13 @@
 Welcome to the News AI Summarizer project! This web application allows users to input specific keywords or topics and receive summarized news articles, making it easier to stay informed about current events without sifting through large amounts of text.
 #
 
+<img src="screenshots/Screenshot 2024-10-03 210301.png" >
+<br/>
+<img src="screenshots/Screenshot 2024-10-03 210409.png">
 
 ## Why LLama3 Hosted on Groq?
 
-For the summarization process, I chose to use LLama3 hosted on Groq because I wanted to use llama3 70 billion parameter model without having to worry about my hardware resources. But note that the open source version has a limited number of API per minute.
+For the summarization process, I chose to use LLama3 hosted on Groq because I wanted to leverage the 70 billion parameter model without worrying about hardware resources. However, please note that the open-source version has a limited number of API calls per minute.
 
 ## Features
 
@@ -26,16 +29,40 @@ For the summarization process, I chose to use LLama3 hosted on Groq because I wa
 ## Getting Started
 
 To clone and run this project locally, follow these steps:
-**1- Clone the repository**
-**2- Set up virtual environment**
-**3- Install dependencies**
-**4- Add you own API Keys**
-you can get them from [groq](https://console.groq.com/keys) and [News API}(https://newsapi.org/)
-**5- Run the app**
-```
-python manage.py runserver
-```
-Open your web browser and navigate to `http://127.0.0.1:8000/` to access the application.
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. **Set up a virtual environment**:
+   ```bash
+   python -m venv venv
+   ```
+
+3. **Activate the virtual environment**:
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+
+4. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. **Add your own API Keys**:
+   You can get them from [Groq](https://console.groq.com/keys) and [News API](https://newsapi.org/).
+
+6. **Run the app**:
+   ```bash
+   python manage.py runserver
+   ```
+   Open your web browser and navigate to `http://127.0.0.1:8000/` to access the application.
 
 ## Contributing
 
