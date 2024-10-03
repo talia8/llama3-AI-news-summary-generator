@@ -49,16 +49,11 @@ To clone and run this project locally, follow these steps:
      ```bash
      source venv/bin/activate
      ```
-
-4. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. **Add your own API Keys**:
+     
+4. **Add your own API Keys**:
    You can get them from [Groq](https://console.groq.com/keys) and [News API](https://newsapi.org/).
 
-6. **Run the app**:
+5. **Run the app**:
    ```bash
    python manage.py runserver
    ```
