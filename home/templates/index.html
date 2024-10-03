@@ -1,0 +1,46 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Summary</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+    
+</head>
+<body class=" body bg-light d-flex flex-column justify-content-center align-items-center vh-100">
+    
+    <div class="maiin text-center">
+        <!-- Main Title with Red Dot on the Right -->
+        <h1 class="briefly-title font-weight-bold " >
+            Briefly 
+            <svg class="red-dot" xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 16 16">
+                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+            </svg>
+        </h1>
+        
+        <!-- Subheading -->
+        <p class="lead text-white subheader">Get the headlines, skip the fluff — news that gets to the point.</p>
+        
+        <!-- Horizontal Divider -->
+        <hr class="my-4 " />
+
+        <!-- Button -->
+        <a href="{% url 'summarize' %}" class="btn btn-danger btn-lg rounded-pill">Get Started</a>
+    </div>
+
+    <!-- Bootstrap JS (Optional, for interactive components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

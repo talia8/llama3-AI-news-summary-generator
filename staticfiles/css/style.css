@@ -1,0 +1,117 @@
+/* Style for the SVG dot */
+.red-dot {
+    display: inline-block;
+    width: 80px;
+    /* Size of the dot */
+    height: 80px;
+    /* Size of the dot */
+    
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 10px;
+    margin-top: 50px;
+    /* Align with text */
+    margin-inline-start: 0;
+    transform: translateY(-10px);
+    /* Move it slightly down */
+    transform: translateX(-20px);
+}
+
+/* Increase the font size for Briefly */
+.briefly-title {
+    font-size: 128px;
+    /* Change this value for larger text */
+    margin-left: 60px;
+    padding-right: 0px;
+    margin-right: 0px;
+    font-family: "PT Serif", serif;
+}
+
+body {
+    background-image: url('../images/background.jpg');
+    /* Adjust the path as needed */
+    background-size: cover;
+    /* Cover the entire viewport */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    margin: 0;
+}
+
+.main {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+}
+
+.subheader {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: 'PT Serif', serif;
+    font-weight: 600;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.search-bar {
+    background: #ECE6F0;
+    border-radius: 28px;
+    padding: 10px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.search-button {
+    background: #49454F;
+    border: none;
+    color: white;
+}
+
+.main-title {
+    font-size: 48px;
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info-text {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #49454F;
+}
+
+.rectangle {
+    background: #F3EDF7;
+    border-radius: 38px;
+    padding: 30px;
+}
+
+.line {
+    border-top: 2px solid rgba(255, 255, 255, 0.68);
+    margin: 20px 0;
+}
+
+.news-text {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: medium;
+}
+
+.summary{
+    background-color: #f5f0f0;
+}

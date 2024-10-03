@@ -1,0 +1,54 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Briefly</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Lora:ital,wght@0,400..700;1,400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  
+    
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="main-title">Search For Specific Keywords/Topics</h1>
+
+      <div class="row justify-content-center mt-5">
+        <form class="d-flex col-md-8" role="search">
+          <input class="form-control me-2 mr-2" type="search" placeholder="Ex: Crypto, Stock Market, Generative AI . . ." aria-label="Search" name="query" />
+          <button href="{% url 'summarize' %}" class="btn btn-danger pt-1 py-0 px-2" type="submit"><span class="material-symbols-outlined">search</span></button>
+        </form>
+      </div>
+
+      {% if summary %}
+        <div class="row justify-content-center mt-5 px-3 py-3">
+          <h2 class="text-center mb-4 px-3 py-2" style="background-color: #f5f0f0;">Latest Updates on {{ query }}</h2>
+          <ul class="news-text">
+            {% for line in summary %}
+              {% if line != '' %}
+                <div class="justify-content-center px-3 py-4" style="background-color: #f5f0f0;">
+                  <li class="mx-3">{{ line }}</li>
+                </div>
+                <br />
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
